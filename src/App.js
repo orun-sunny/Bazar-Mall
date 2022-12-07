@@ -4,6 +4,7 @@ import Navbar from './Components/Navbar/Navbar'
 import LogoSearchBar from './Components/LogoSearchBar/LogoSearchBar';
 import Carosel from './Components/Carousel/Carosel';
 import TopBanner from './Components/TopBanner/TopBanner';
+import FlashSale from './Components/FlashSale/FlashSale';
 
 function App() {
   return (
@@ -12,6 +13,7 @@ function App() {
     <LogoSearchBar/>
     <Carosel></Carosel>
     <TopBanner></TopBanner>
+    <FlashSale></FlashSale>
     </div>
   );
 }
