@@ -7,7 +7,7 @@ import feature4 from "../../baraz-assets-main/images/feature4.png";
 
 const TopBanner = () => {
     return (
-        <div className="top-banner">
+        <div className="bg-brand">
             <div className='container'>
                 <img src="" alt="" />
                 <div className='row'>
