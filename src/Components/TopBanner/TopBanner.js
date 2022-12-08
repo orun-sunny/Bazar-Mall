@@ -1,35 +1,27 @@
 import React from 'react';
 import './TopBanner.css';
-import feature1 from "../../baraz-assets-main/images/feature1.png";
-import feature2 from "../../baraz-assets-main/images/feature2.png";
-import feature3 from "../../baraz-assets-main/images/feature3.png";
-import feature4 from "../../baraz-assets-main/images/feature4.png";
+import topImage from '../../baraz-assets-main/images/top.png'
+import topBannerData from '../Data/TopBannerData';
 
 const TopBanner = () => {
     return (
         <div className="bg-brand">
             <div className='container'>
-                <img src="" alt="" />
+                <img className='mx-auto d-block pt-2' src={topImage} alt="" />
                 <div className='row'>
-                    <div style={{borderRadius:"18px"}} className='col m-2 bg-white py-1'>
-                        <img src={feature1} width='40' className='img-fluid' alt="" />
-                        <a href="/" className='text-decoration-none text-dark fw-bold ps-2'>Free Shipping</a>
+                    {
+                        topBannerData.map(data =>
+                            <div key={data.id} style={{borderRadius:"18px"}} className='col m-2 bg-white py-1'>
+                        <img src={data.image} width='40' className='img-fluid' alt={data.name} />
+                        <a href={data.link} className='text-decoration-none text-dark fw-bold ps-2'>Free Shipping</a>
 
                     </div>
-                    <div style={{borderRadius:"18px"}} className='col m-2 bg-white py-1'>
-                        <img src={feature2} width='40' className='img-fluid' alt="" />
-                        <a href="/" className='text-decoration-none text-dark fw-bold ps-2'>Grocery shopping</a>
-                    </div>
-                    <div style={{borderRadius:"18px"}} className='col m-2 bg-white py-1 '>
-                        <img src={feature3} width='40' className='img-fluid' alt="" />
-                        <a href="/" className='text-decoration-none text-dark fw-bold ps-2'>Sarazzz mall</a>
+                    )
 
-                    </div>
-                    <div style={{borderRadius:"18px"}} className='col m-2 bg-white py-1'>
-                        <img src={feature4} width='40' className='img-fluid' alt="" />
-                        <a href="/" className='text-decoration-none text-dark fw-bold ps-2'>Digital Sheba</a>
+                    }
 
-                    </div>
+
+                   
                 </div>
             </div>
         </div>
